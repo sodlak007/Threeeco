@@ -1,22 +1,35 @@
-<!DOCTYPE HTML>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
-	<title>Threee</title>
-	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-	<!-- <link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen"> -->
-	<!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Parallax Plugin Demo</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.nav-btm').localScroll(800);
+	
+	//.parallax(xPosition, speedFactor, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#intro').parallax("50%", 0.1);
+	$('#second').parallax("50%", 0.1);
+	$('.bg').parallax("50%", 0.4);
+	$('#third').parallax("50%", 0.3);
+
+})
+</script>
 </head>
 
-<body>
-
-	<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+<body>	
+	<div id="intro">
 		<div class="container clearfix">
 
 			<div id="content" class="grid_12">
@@ -36,17 +49,17 @@
 				</div>
 				<div class="nav-btm">
 					<ul>
-						<li><img src="images/happy.png"></li>
-						<li><img src="images/love.png"></li>
-						<li><img src="images/notebook.png"></li>
+						<li><a href="#second" title="Next Section"><img src="images/happy.png"></a></li>
+						<li><a href="#third" title="Next Section"><img src="images/love.png"></a></li>
+						<li><a href="#fifth" title="Next Section"><img src="images/notebook.png"></a></li>
 					</ul>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div><!--.story-->
+	</div> <!--#intro-->
+	
 
-
-	<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+	<div id="second">
 		<div class="container clearfix">
 
 			<div id="content" class="grid_12">
@@ -76,11 +89,13 @@
 				</div>
 
 		</div>
-	</div>
+	</div> <!--.story-->
+	    
+	</div> <!--#second-->
+	
 
 
-
-	<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
+	<div id="third">
 		<div class="container clearfix">
 
 			<div id="content" class="grid_12">
@@ -108,11 +123,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> <!--#third-->
+	
 
-
-
-	<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
+	
+	<div id="fifth">
 		<div class="container clearfix">
 
 			<div id="content" class="grid_12">
@@ -150,13 +165,6 @@
 			</div>
 
 		</div>
-	</div>
-
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquerdy.min.js"></script>
-	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
-	<script type="text/javascript" src="js/waypoints.min.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
-	<!-- <script type="text/javascript" src="js/scripts.min.js"></script> -->
+	</div> <!--#fifth-->
 </body>
 </html>
