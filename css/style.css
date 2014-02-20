@@ -685,3 +685,20 @@ padding-bottom: 5px;
 		text-align: left;
 	}
 }
+
+/* Mobile */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+	.container {
+		width: 90%;
+	}
+
+	.tagline p {
+		font-size: 2.4em;
+	}
+
+	.slide {
+		padding: 70px 0;
+	}
+
+}
