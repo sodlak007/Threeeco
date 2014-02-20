@@ -249,12 +249,6 @@ padding-bottom: 5px;
 	padding:0;
 }
 
-.navigation li{
-	float: left;
-	width:25%;
-	padding:0;
-}
-
 .slide{
 	background-attachment: fixed;
 	width:100%;
@@ -266,35 +260,7 @@ padding-bottom: 5px;
 	display:none;
 }
 
-#content {
-	text-align:center;
-	width:100%;
-}
 
-#slide1 h1 {
-	line-height: 1em;
-}
-#slide1 h2 {
-	line-height: 1em;
-}
-#slide2 h1 {
-	line-height: 1em;
-}
-#slide2 h2 {
-	line-height: 1em;
-}
-#slide3 h1 {
-	line-height: 1em;
-}
-#slide3 h2 {
-	line-height: 1em;
-}
-#slide4 h1 {
-	line-height: 1em;
-}
-#slide4 h2 {
-	line-height: 1em;
-}
 
 }
 
@@ -699,6 +665,32 @@ padding-bottom: 5px;
 
 	.slide {
 		padding: 70px 0;
+	}
+
+	#slide2 {
+	height: 671px;
+	}
+
+	.bottom-icon {
+	float: left;
+	}
+
+	#content {
+	text-align:left;
+	width:100%;
+	}
+
+	.contact-txt {
+	width: 80%;
+	padding-bottom: 30px;
+	}
+
+	.pink {
+	margin: 0 0 10px;
+	}
+
+	.ctn-logo {
+	padding-top: 40px;
 	}
 
 }
